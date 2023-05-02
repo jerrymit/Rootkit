@@ -14,7 +14,7 @@ void insert_sneaky_mod(int sneaky_pid) {
 
   if(pid > 0)
   {
-    waitpid(pid, NULL, 0);
+    waitpid(pid, NULL, 0)
   }
   else if(pid == 0)
   {
