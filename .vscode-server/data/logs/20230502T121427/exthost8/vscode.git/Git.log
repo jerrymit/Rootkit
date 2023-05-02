@@ -1,0 +1,183 @@
+2023-05-02 14:50:13.152 [info] Log level: Info
+2023-05-02 14:50:13.152 [info] Validating found git in: "git"
+2023-05-02 14:50:13.152 [info] Using git "2.25.1" from "git"
+2023-05-02 14:50:13.152 [info] > git rev-parse --show-toplevel [28ms]
+2023-05-02 14:50:13.152 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 14:50:13.152 [info] > git rev-parse --show-toplevel [7ms]
+2023-05-02 14:50:13.152 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 14:50:13.152 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 14:50:13.152 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 14:50:13.152 [info] > git rev-parse --show-toplevel [1ms]
+2023-05-02 14:50:13.152 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 14:50:13.152 [info] > git rev-parse --show-toplevel [1ms]
+2023-05-02 14:50:13.152 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 14:50:13.152 [info] > git rev-parse --show-toplevel [1ms]
+2023-05-02 14:50:13.152 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 14:50:13.152 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 14:50:13.152 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 14:50:13.152 [info] > git rev-parse --show-toplevel [13ms]
+2023-05-02 14:50:13.152 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 15:03:17.930 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 15:03:17.930 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 15:03:23.694 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 15:03:23.694 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 15:03:24.706 [info] > git rev-parse --show-toplevel [6ms]
+2023-05-02 15:03:24.706 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 15:03:26.924 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 15:03:26.924 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 16:15:01.295 [info] > git rev-parse --show-toplevel [1ms]
+2023-05-02 16:15:01.295 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 16:15:04.368 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 16:15:04.368 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 16:15:07.433 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 16:15:07.433 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 16:15:09.875 [info] > git rev-parse --show-toplevel [1ms]
+2023-05-02 16:15:09.875 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 16:15:15.866 [info] > git rev-parse --show-toplevel [3ms]
+2023-05-02 16:15:15.866 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 16:15:18.368 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 16:15:18.368 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2023-05-02 16:27:35.488 [info] > git rev-parse --show-toplevel [2ms]
+2023-05-02 16:27:35.500 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2023-05-02 16:27:35.510 [info] Open repository: /home/cn154
+2023-05-02 16:27:35.523 [info] No remotes found in the git config file.
+2023-05-02 16:27:35.523 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:27:35.543 [info] > git config --get commit.template [24ms]
+2023-05-02 16:27:35.585 [info] > git status -z -uall [32ms]
+2023-05-02 16:27:36.008 [info] > git config --get commit.template [6ms]
+2023-05-02 16:27:36.018 [info] No remotes found in the git config file.
+2023-05-02 16:27:36.019 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-05-02 16:27:36.054 [info] > git status -z -uall [29ms]
+2023-05-02 16:27:36.114 [info] > git check-ignore -v -z --stdin [20ms]
+2023-05-02 16:27:36.500 [info] > git show --textconv :proj5_cn154/sneaky_mod.c [351ms]
+2023-05-02 16:27:36.500 [info] > git show --textconv :proj5_cn154/sneaky_process.c [345ms]
+2023-05-02 16:27:36.500 [info] > git show --textconv :proj5_cn154/sneaky_mod.mod.c [338ms]
+2023-05-02 16:27:36.501 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_mod.mod.c [324ms]
+2023-05-02 16:27:36.502 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_process.c [329ms]
+2023-05-02 16:27:36.502 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_mod.c [335ms]
+2023-05-02 16:27:39.109 [info] No remotes found in the git config file.
+2023-05-02 16:27:39.109 [info] > git config --get commit.template [8ms]
+2023-05-02 16:27:39.111 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-05-02 16:27:39.139 [info] > git status -z -uall [24ms]
+2023-05-02 16:27:44.189 [info] No remotes found in the git config file.
+2023-05-02 16:27:44.190 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:27:44.191 [info] > git config --get commit.template [7ms]
+2023-05-02 16:27:44.215 [info] > git status -z -uall [19ms]
+2023-05-02 16:27:49.268 [info] No remotes found in the git config file.
+2023-05-02 16:27:49.269 [info] > git config --get commit.template [7ms]
+2023-05-02 16:27:49.269 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:27:49.299 [info] > git status -z -uall [25ms]
+2023-05-02 16:27:54.341 [info] > git config --get commit.template [2ms]
+2023-05-02 16:27:54.350 [info] No remotes found in the git config file.
+2023-05-02 16:27:54.353 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-05-02 16:27:54.380 [info] > git status -z -uall [21ms]
+2023-05-02 16:27:59.433 [info] No remotes found in the git config file.
+2023-05-02 16:27:59.433 [info] > git config --get commit.template [7ms]
+2023-05-02 16:27:59.433 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:27:59.458 [info] > git status -z -uall [20ms]
+2023-05-02 16:28:00.970 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_process.c [7ms]
+2023-05-02 16:28:00.975 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_mod.c [21ms]
+2023-05-02 16:28:00.985 [info] > git cat-file -s 85100adf9ef9e6498057ec28831f6f8c8f5cbbae [10ms]
+2023-05-02 16:28:00.988 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_mod.mod.c [20ms]
+2023-05-02 16:28:00.998 [info] > git cat-file -s 8971d981466e9c03a1f1ff95df2a5be21a00b357 [15ms]
+2023-05-02 16:28:01.000 [info] > git cat-file -s e848a61447db6e76366343f1a43c831cf6a818a6 [3ms]
+2023-05-02 16:28:01.036 [info] > git show --textconv :proj5_cn154/sneaky_process.c [15ms]
+2023-05-02 16:28:01.036 [info] > git show --textconv :proj5_cn154/sneaky_mod.c [8ms]
+2023-05-02 16:28:01.039 [info] > git show --textconv :proj5_cn154/sneaky_mod.mod.c [5ms]
+2023-05-02 16:28:04.522 [info] No remotes found in the git config file.
+2023-05-02 16:28:04.523 [info] > git config --get commit.template [9ms]
+2023-05-02 16:28:04.523 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:28:04.552 [info] > git status -z -uall [23ms]
+2023-05-02 16:28:09.606 [info] No remotes found in the git config file.
+2023-05-02 16:28:09.607 [info] > git config --get commit.template [8ms]
+2023-05-02 16:28:09.607 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:28:09.635 [info] > git status -z -uall [21ms]
+2023-05-02 16:28:10.676 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_mod.mod.c [2ms]
+2023-05-02 16:28:10.688 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_process.c [29ms]
+2023-05-02 16:28:10.694 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_mod.c [43ms]
+2023-05-02 16:28:10.711 [info] > git cat-file -s 85100adf9ef9e6498057ec28831f6f8c8f5cbbae [17ms]
+2023-05-02 16:28:10.712 [info] > git cat-file -s e848a61447db6e76366343f1a43c831cf6a818a6 [24ms]
+2023-05-02 16:28:10.713 [info] > git cat-file -s 8971d981466e9c03a1f1ff95df2a5be21a00b357 [9ms]
+2023-05-02 16:28:10.749 [info] > git show --textconv :proj5_cn154/sneaky_process.c [8ms]
+2023-05-02 16:28:10.751 [info] > git show --textconv :proj5_cn154/sneaky_mod.mod.c [2ms]
+2023-05-02 16:28:10.766 [info] > git show --textconv :proj5_cn154/sneaky_mod.c [5ms]
+2023-05-02 16:28:14.741 [info] No remotes found in the git config file.
+2023-05-02 16:28:14.742 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:28:14.743 [info] > git config --get commit.template [12ms]
+2023-05-02 16:28:14.777 [info] > git status -z -uall [25ms]
+2023-05-02 16:28:19.835 [info] No remotes found in the git config file.
+2023-05-02 16:28:19.835 [info] > git config --get commit.template [12ms]
+2023-05-02 16:28:19.837 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-05-02 16:28:19.867 [info] > git status -z -uall [22ms]
+2023-05-02 16:28:24.932 [info] No remotes found in the git config file.
+2023-05-02 16:28:24.933 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:28:24.934 [info] > git config --get commit.template [14ms]
+2023-05-02 16:28:24.964 [info] > git status -z -uall [21ms]
+2023-05-02 16:28:30.008 [info] No remotes found in the git config file.
+2023-05-02 16:28:30.016 [info] > git config --get commit.template [9ms]
+2023-05-02 16:28:30.017 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:28:30.050 [info] > git status -z -uall [24ms]
+2023-05-02 16:28:49.146 [info] No remotes found in the git config file.
+2023-05-02 16:28:49.147 [info] > git config --get commit.template [9ms]
+2023-05-02 16:28:49.147 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:28:49.174 [info] > git status -z -uall [21ms]
+2023-05-02 16:28:54.258 [info] No remotes found in the git config file.
+2023-05-02 16:28:54.259 [info] > git config --get commit.template [8ms]
+2023-05-02 16:28:54.260 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-05-02 16:28:54.288 [info] > git status -z -uall [23ms]
+2023-05-02 16:28:57.625 [info] > git check-ignore -v -z --stdin [5ms]
+2023-05-02 16:29:01.449 [info] No remotes found in the git config file.
+2023-05-02 16:29:01.449 [info] > git config --get commit.template [7ms]
+2023-05-02 16:29:01.450 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-05-02 16:29:01.481 [info] > git status -z -uall [25ms]
+2023-05-02 16:29:06.524 [info] No remotes found in the git config file.
+2023-05-02 16:29:06.525 [info] > git config --get commit.template [8ms]
+2023-05-02 16:29:06.525 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:29:06.555 [info] > git status -z -uall [22ms]
+2023-05-02 16:29:11.599 [info] No remotes found in the git config file.
+2023-05-02 16:29:11.599 [info] > git config --get commit.template [8ms]
+2023-05-02 16:29:11.600 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [1ms]
+2023-05-02 16:29:11.641 [info] > git status -z -uall [34ms]
+2023-05-02 16:29:16.690 [info] No remotes found in the git config file.
+2023-05-02 16:29:16.691 [info] > git config --get commit.template [10ms]
+2023-05-02 16:29:16.692 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-05-02 16:29:16.719 [info] > git status -z -uall [21ms]
+2023-05-02 16:29:21.762 [info] > git config --get commit.template [1ms]
+2023-05-02 16:29:21.762 [info] No remotes found in the git config file.
+2023-05-02 16:29:21.777 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-05-02 16:29:21.805 [info] > git status -z -uall [21ms]
+2023-05-02 16:29:22.556 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_process.c [10ms]
+2023-05-02 16:29:22.563 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_mod.c [29ms]
+2023-05-02 16:29:22.573 [info] > git cat-file -s 85100adf9ef9e6498057ec28831f6f8c8f5cbbae [10ms]
+2023-05-02 16:29:22.574 [info] > git ls-files --stage -- /home/cn154/proj5_cn154/sneaky_mod.mod.c [19ms]
+2023-05-02 16:29:22.580 [info] > git cat-file -s 8971d981466e9c03a1f1ff95df2a5be21a00b357 [8ms]
+2023-05-02 16:29:22.582 [info] > git cat-file -s e848a61447db6e76366343f1a43c831cf6a818a6 [2ms]
+2023-05-02 16:29:22.620 [info] > git show --textconv :proj5_cn154/sneaky_process.c [19ms]
+2023-05-02 16:29:22.620 [info] > git show --textconv :proj5_cn154/sneaky_mod.c [11ms]
+2023-05-02 16:29:22.621 [info] > git show --textconv :proj5_cn154/sneaky_mod.mod.c [2ms]
+2023-05-02 16:29:26.858 [info] No remotes found in the git config file.
+2023-05-02 16:29:26.859 [info] > git config --get commit.template [11ms]
+2023-05-02 16:29:26.860 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2023-05-02 16:29:26.888 [info] > git status -z -uall [22ms]
+2023-05-02 16:29:31.960 [info] No remotes found in the git config file.
+2023-05-02 16:29:31.961 [info] > git config --get commit.template [14ms]
+2023-05-02 16:29:31.961 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-05-02 16:29:32.002 [info] > git status -z -uall [24ms]

@@ -1,0 +1,18 @@
+{
+    "code-runner.runInTerminal": true,
+    "window.zoomLevel": 1,
+    "remote.SSH.remotePlatform": {
+        "dukevm": "linux",
+        "568_project4": "linux",
+        "568_final": "linux",
+        "650_proj5": "linux"
+    },
+    "[python]": {
+        "breadcrumbs.showArrays": true,
+        "breadcrumbs.showInterfaces": true,
+        "editor.formatOnType": true
+    },
+    "files.associations": {
+        "*.py": "python"
+    }
+}

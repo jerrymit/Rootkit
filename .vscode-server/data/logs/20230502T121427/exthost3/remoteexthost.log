@@ -1,0 +1,12 @@
+2023-05-02 12:57:35.584 [info] Extension host with pid 15852 started
+2023-05-02 12:57:35.601 [info] Lock '/home/cn154/.vscode-server/data/User/workspaceStorage/26ff546dae369fedca9e55bb3423d2ed/vscode.lock': Lock acquired.
+2023-05-02 12:57:35.641 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2023-05-02 12:57:35.887 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-05-02 12:57:35.912 [info] Eager extensions activated
+2023-05-02 12:57:35.912 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-05-02 12:57:35.912 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-05-02 12:57:36.186 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2023-05-02 12:57:58.001 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-05-02 13:01:05.233 [info] Extension host terminating: received terminate message from renderer
+2023-05-02 13:01:05.234 [info] Lock '/home/cn154/.vscode-server/data/User/workspaceStorage/26ff546dae369fedca9e55bb3423d2ed/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2023-05-02 13:01:05.247 [info] Extension host with pid 15852 exiting with code 0
