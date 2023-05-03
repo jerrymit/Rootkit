@@ -16,3 +16,4 @@
 2023-05-03 12:08:53.243 [info] [127.0.0.1][7c99a1b4][ManagementConnection] New connection established.
 2023-05-03 12:08:53.282 [info] [127.0.0.1][1fa2d1f3][ExtensionHostConnection] New connection established.
 2023-05-03 12:08:53.291 [info] [127.0.0.1][1fa2d1f3][ExtensionHostConnection] <19933> Launched Extension Host Process.
+2023-05-03 12:13:53.121 [info] New EH opened, aborting shutdown

