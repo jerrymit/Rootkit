@@ -1,0 +1,26 @@
+2023-05-03 13:14:12.080 [info] 
+
+
+
+
+2023-05-03 13:14:12.081 [info] Extension host agent started.
+2023-05-03 13:14:12.162 [error] [127.0.0.1][7c99a1b4][ManagementConnection] Unknown reconnection token (never seen).
+2023-05-03 13:14:43.416 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-05-03 13:14:43.416 [info] Cancelling previous shutdown timeout
+2023-05-03 13:14:43.654 [info] [127.0.0.1][752273ea][ManagementConnection] New connection established.
+2023-05-03 13:14:43.716 [info] [127.0.0.1][c9ac422d][ExtensionHostConnection] New connection established.
+2023-05-03 13:14:43.721 [info] [127.0.0.1][c9ac422d][ExtensionHostConnection] <1224> Launched Extension Host Process.
+2023-05-03 13:14:49.827 [error] CodeExpectedError: Could not find pty on pty host
+    at L (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:28:6849)
+    at L.updateIcon (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:28:2680)
+    at Object.call (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
+    at g.s (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:15:5413)
+    at g.q (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:15:4916)
+    at /home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:15:4327
+    at c.invoke (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at f.deliver (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at n.fire (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.T (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:9:21039)
+    at process.emit (node:events:526:28)
+    at emit (node:internal/child_process:938:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
