@@ -929,6 +929,7 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
     $(wildcard include/config/kallsyms/all.h) \
   arch/x86/include/asm/sections.h \
   include/asm-generic/sections.h \
+  include/linux/dirent.h \
 
 /home/cn154/proj5_cn154/sneaky_mod.o: $(deps_/home/cn154/proj5_cn154/sneaky_mod.o)
 

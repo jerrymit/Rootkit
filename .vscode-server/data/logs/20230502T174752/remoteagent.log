@@ -1,0 +1,14 @@
+2023-05-02 17:47:52.330 [info] 
+
+
+
+
+2023-05-02 17:47:52.397 [info] Extension host agent started.
+2023-05-02 17:47:52.636 [info] [127.0.0.1][e3ef018e][ManagementConnection] New connection established.
+2023-05-02 17:47:52.672 [info] [127.0.0.1][30c3118b][ExtensionHostConnection] New connection established.
+2023-05-02 17:47:52.676 [info] [127.0.0.1][30c3118b][ExtensionHostConnection] <1068> Launched Extension Host Process.
+2023-05-02 17:47:52.785 [info] Deleted from disk ms-vscode.cpptools-extension-pack /home/cn154/.vscode-server/extensions/ms-vscode.cpptools-extension-pack-1.3.0
+2023-05-02 17:47:52.841 [info] Deleted from disk ms-vscode.cpptools-themes /home/cn154/.vscode-server/extensions/ms-vscode.cpptools-themes-2.0.0
+2023-05-02 17:47:52.990 [info] Deleted from disk ms-vscode.cmake-tools /home/cn154/.vscode-server/extensions/ms-vscode.cmake-tools-1.14.30
+2023-05-02 17:47:52.990 [info] Deleted from disk ms-vscode.cpptools /home/cn154/.vscode-server/extensions/ms-vscode.cpptools-1.15.4-linux-x64
+2023-05-02 17:47:52.994 [info] Deleted from disk twxs.cmake /home/cn154/.vscode-server/extensions/twxs.cmake-0.0.17

