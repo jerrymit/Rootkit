@@ -5,18 +5,32 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
+<<<<<<< HEAD
 Server bound to 127.0.0.1:45509 (IPv4)
 Extension host agent listening on 45509
 
 [10:40:19] 
+=======
+Server bound to 127.0.0.1:33609 (IPv4)
+Extension host agent listening on 33609
+
+[09:10:55] 
+>>>>>>> e9bf799f98155b2d17248c56ecff3ba2ed943759
 
 
 
 
+<<<<<<< HEAD
 [10:40:19] Extension host agent started.
 [10:40:19] [127.0.0.1][c2c7b3dd][ManagementConnection] New connection established.
 [10:40:19] [127.0.0.1][e7fe4c63][ExtensionHostConnection] New connection established.
 [10:40:19] [127.0.0.1][e7fe4c63][ExtensionHostConnection] <1007> Launched Extension Host Process.
+=======
+[09:10:55] Extension host agent started.
+[09:10:55] [127.0.0.1][6855c2e0][ManagementConnection] New connection established.
+[09:10:55] [127.0.0.1][d90c1de8][ExtensionHostConnection] New connection established.
+[09:10:55] [127.0.0.1][d90c1de8][ExtensionHostConnection] <4641> Launched Extension Host Process.
+>>>>>>> e9bf799f98155b2d17248c56ecff3ba2ed943759
 [IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
   '-c',
   'wget --version > /dev/null\n' +
@@ -329,4 +343,89 @@ Cancelling previous shutdown timeout
 [IPC Library: Pty Host]  INFO Persistent process reconnection "18"
 [IPC Library: Pty Host]  INFO Persistent process "18": Replaying 629 chars and 1 size events
 New EH opened, aborting shutdown
+<<<<<<< HEAD
 [10:48:39] New EH opened, aborting shutdown
+=======
+[09:15:55] New EH opened, aborting shutdown
+[10:18:07] [127.0.0.1][6855c2e0][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[10:18:07] [127.0.0.1][d90c1de8][ExtensionHostConnection] <4641> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[10:18:07] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[10:18:12] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[10:18:12] Cancelling previous shutdown timeout
+[10:18:13] [127.0.0.1][23911f38][ManagementConnection] New connection established.
+[10:18:13] [127.0.0.1][1f5da7b9][ExtensionHostConnection] New connection established.
+[10:18:13] [127.0.0.1][1f5da7b9][ExtensionHostConnection] <12703> Launched Extension Host Process.
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata:true' -O - http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata:true' http://169.254.169.254/metadata/instance?api-version=2019-03-11\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/latest/meta-data/instance-id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/latest/meta-data/instance-id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    '\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q  -O - http://169.254.169.254/metadata/v1/id\n' +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    '\t\tcurl --connect-timeout 7 -s  http://169.254.169.254/metadata/v1/id\n' +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Shell integration cannot be enabled for executable "/bin/sh" and args [
+  '-c',
+  'wget --version > /dev/null\n' +
+    'if [ $? -eq 0 ]\n' +
+    'then\n' +
+    "\twget --connect-timeout=7 --tries=1 --dns-timeout=7 -q --header='Metadata-Flavor:Google' -O - http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    'else\n' +
+    '\tcurl --version > /dev/null\n' +
+    '\tif [ $? -eq 0 ]\n' +
+    '\tthen\n' +
+    "\t\tcurl --connect-timeout 7 -s --header='Metadata-Flavor:Google' http://metadata.google.internal/computeMetadata/v1/instance/id\n" +
+    '\tfi\n' +
+    'fi\n' +
+    'exit 0'
+]
+[IPC Library: Pty Host]  WARN Persistent process "8": Process had no disconnect runners but was an orphan
+[IPC Library: Pty Host]  INFO Persistent process reconnection "8"
+[IPC Library: Pty Host]  WARN Persistent process "9": Process had no disconnect runners but was an orphan
+[IPC Library: Pty Host]  INFO Persistent process reconnection "9"
+[IPC Library: Pty Host]  WARN Persistent process "10": Process had no disconnect runners but was an orphan
+[IPC Library: Pty Host]  INFO Persistent process reconnection "10"
+[IPC Library: Pty Host]  INFO Persistent process "9": Replaying 9449 chars and 1 size events
+[IPC Library: Pty Host]  INFO Persistent process "10": Replaying 2861 chars and 1 size events
+New EH opened, aborting shutdown
+[10:23:12] New EH opened, aborting shutdown
+>>>>>>> e9bf799f98155b2d17248c56ecff3ba2ed943759

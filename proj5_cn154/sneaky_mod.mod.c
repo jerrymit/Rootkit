@@ -27,8 +27,11 @@ __used __section(__versions) = {
 	{ 0xdd8f8694, "module_layout" },
 	{ 0xe007de41, "kallsyms_lookup_name" },
 	{ 0xc5850110, "printk" },
-	{ 0xdecd0b29, "__stack_chk_fail" },
 	{ 0x8b9200fd, "lookup_address" },
+	{ 0xdecd0b29, "__stack_chk_fail" },
+	{ 0xb44ad4b3, "_copy_to_user" },
+	{ 0x88db9f48, "__check_object_size" },
+	{ 0xc310b981, "strnstr" },
 	{ 0xb0e602eb, "memmove" },
 	{ 0x2ea2c95c, "__x86_indirect_thunk_rax" },
 	{ 0xbdfb6dbb, "__fentry__" },
@@ -37,4 +40,4 @@ __used __section(__versions) = {
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "96ABDDE1F7049D80B2F4CA3");
+MODULE_INFO(srcversion, "B34C141274FDB533DED4136");
