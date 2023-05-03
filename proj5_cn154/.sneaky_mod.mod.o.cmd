@@ -270,11 +270,8 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.mod.o := \
   include/asm-generic/pgtable-nop4d.h \
   arch/x86/include/asm/nospec-branch.h \
   include/linux/static_key.h \
-  include/linux/frame.h \
   arch/x86/include/asm/alternative-asm.h \
   arch/x86/include/asm/msr-index.h \
-  arch/x86/include/asm/unwind_hints.h \
-  arch/x86/include/asm/orc_types.h \
   arch/x86/include/asm/spinlock_types.h \
     $(wildcard include/config/paravirt/spinlocks.h) \
   include/asm-generic/qspinlock_types.h \
@@ -312,6 +309,8 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.mod.o := \
   arch/x86/include/asm/frame.h \
   arch/x86/include/asm/special_insns.h \
   arch/x86/include/asm/fpu/types.h \
+  arch/x86/include/asm/unwind_hints.h \
+  arch/x86/include/asm/orc_types.h \
   include/linux/personality.h \
   include/uapi/linux/personality.h \
   include/linux/err.h \
@@ -464,8 +463,8 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.mod.o := \
     $(wildcard include/config/hz.h) \
   include/uapi/asm-generic/param.h \
   arch/x86/include/asm/timex.h \
-    $(wildcard include/config/x86/tsc.h) \
   arch/x86/include/asm/tsc.h \
+    $(wildcard include/config/x86/tsc.h) \
   include/linux/jiffies.h \
   include/generated/timeconst.h \
   include/linux/timekeeping.h \
@@ -535,6 +534,7 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.mod.o := \
     $(wildcard include/config/memory/hotremove.h) \
     $(wildcard include/config/have/arch/pfn/valid.h) \
     $(wildcard include/config/holes/in/zone.h) \
+    $(wildcard include/config/arch/has/holes/memorymodel.h) \
   include/linux/nodemask.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
@@ -642,6 +642,8 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.mod.o := \
   include/linux/kobject_ns.h \
   include/linux/kref.h \
   include/linux/refcount.h \
+    $(wildcard include/config/refcount/full.h) \
+  arch/x86/include/asm/refcount.h \
   include/linux/moduleparam.h \
     $(wildcard include/config/alpha.h) \
     $(wildcard include/config/ia64.h) \

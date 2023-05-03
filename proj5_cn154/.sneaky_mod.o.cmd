@@ -296,11 +296,8 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
   include/asm-generic/pgtable-nop4d.h \
   arch/x86/include/asm/nospec-branch.h \
   include/linux/static_key.h \
-  include/linux/frame.h \
   arch/x86/include/asm/alternative-asm.h \
   arch/x86/include/asm/msr-index.h \
-  arch/x86/include/asm/unwind_hints.h \
-  arch/x86/include/asm/orc_types.h \
   arch/x86/include/asm/spinlock_types.h \
     $(wildcard include/config/paravirt/spinlocks.h) \
   include/asm-generic/qspinlock_types.h \
@@ -337,6 +334,8 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
   arch/x86/include/asm/frame.h \
   arch/x86/include/asm/special_insns.h \
   arch/x86/include/asm/fpu/types.h \
+  arch/x86/include/asm/unwind_hints.h \
+  arch/x86/include/asm/orc_types.h \
   include/linux/personality.h \
   include/uapi/linux/personality.h \
   include/linux/err.h \
@@ -402,8 +401,8 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
     $(wildcard include/config/hz.h) \
   include/uapi/asm-generic/param.h \
   arch/x86/include/asm/timex.h \
-    $(wildcard include/config/x86/tsc.h) \
   arch/x86/include/asm/tsc.h \
+    $(wildcard include/config/x86/tsc.h) \
   include/linux/uidgid.h \
     $(wildcard include/config/multiuser.h) \
     $(wildcard include/config/user/ns.h) \
@@ -443,6 +442,7 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
     $(wildcard include/config/memory/hotremove.h) \
     $(wildcard include/config/have/arch/pfn/valid.h) \
     $(wildcard include/config/holes/in/zone.h) \
+    $(wildcard include/config/arch/has/holes/memorymodel.h) \
   include/linux/wait.h \
   include/uapi/linux/wait.h \
   include/linux/numa.h \
@@ -639,6 +639,8 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
   include/linux/kobject_ns.h \
   include/linux/kref.h \
   include/linux/refcount.h \
+    $(wildcard include/config/refcount/full.h) \
+  arch/x86/include/asm/refcount.h \
   include/linux/moduleparam.h \
     $(wildcard include/config/alpha.h) \
     $(wildcard include/config/ia64.h) \
@@ -681,7 +683,6 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
     $(wildcard include/config/schedstats.h) \
     $(wildcard include/config/fair/group/sched.h) \
     $(wildcard include/config/rt/group/sched.h) \
-    $(wildcard include/config/rt/mutexes.h) \
     $(wildcard include/config/uclamp/task.h) \
     $(wildcard include/config/uclamp/buckets/count.h) \
     $(wildcard include/config/cgroup/sched.h) \
@@ -698,6 +699,7 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
     $(wildcard include/config/detect/hung/task.h) \
     $(wildcard include/config/audit.h) \
     $(wildcard include/config/auditsyscall.h) \
+    $(wildcard include/config/rt/mutexes.h) \
     $(wildcard include/config/ubsan.h) \
     $(wildcard include/config/block.h) \
     $(wildcard include/config/task/xacct.h) \
@@ -870,7 +872,6 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
     $(wildcard include/config/arch/has/set/direct/map.h) \
     $(wildcard include/config/hibernation.h) \
     $(wildcard include/config/hugetlbfs.h) \
-  include/linux/mmap_lock.h \
   include/linux/percpu-refcount.h \
   include/linux/page_ext.h \
   include/linux/stacktrace.h \
@@ -892,7 +893,6 @@ deps_/home/cn154/proj5_cn154/sneaky_mod.o := \
   arch/x86/include/asm/fpu/xstate.h \
   include/linux/uaccess.h \
   arch/x86/include/asm/uaccess.h \
-    $(wildcard include/config/cc/has/asm/goto/tied/output.h) \
     $(wildcard include/config/x86/intel/usercopy.h) \
   arch/x86/include/asm/smap.h \
   arch/x86/include/asm/extable.h \

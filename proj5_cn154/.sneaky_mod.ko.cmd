@@ -1,1 +1,1 @@
-cmd_/home/cn154/proj5_cn154/sneaky_mod.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -z noexecstack   --build-id  -T ./scripts/module-common.lds -o /home/cn154/proj5_cn154/sneaky_mod.ko /home/cn154/proj5_cn154/sneaky_mod.o /home/cn154/proj5_cn154/sneaky_mod.mod.o;  true
+cmd_/home/cn154/proj5_cn154/sneaky_mod.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/cn154/proj5_cn154/sneaky_mod.ko /home/cn154/proj5_cn154/sneaky_mod.o /home/cn154/proj5_cn154/sneaky_mod.mod.o;  true
