@@ -49,3 +49,6 @@
 2023-05-03 10:43:40.119 [info] [127.0.0.1][477f57f6][ExtensionHostConnection] New connection established.
 2023-05-03 10:43:40.133 [info] [127.0.0.1][477f57f6][ExtensionHostConnection] <1771> Launched Extension Host Process.
 2023-05-03 10:48:39.961 [info] New EH opened, aborting shutdown
+2023-05-03 12:08:19.062 [info] [127.0.0.1][8c3eb49b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-03 12:08:19.082 [info] [127.0.0.1][477f57f6][ExtensionHostConnection] <1771> Extension Host Process exited with code: 0, signal: null.
+2023-05-03 12:08:19.082 [info] Last EH closed, waiting before shutting down

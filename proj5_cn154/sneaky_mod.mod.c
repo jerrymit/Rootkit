@@ -28,8 +28,9 @@ __used __section(__versions) = {
 	{ 0x3d7fbf14, "param_ops_charp" },
 	{ 0xe007de41, "kallsyms_lookup_name" },
 	{ 0xc5850110, "printk" },
-	{ 0xdecd0b29, "__stack_chk_fail" },
 	{ 0x8b9200fd, "lookup_address" },
+	{ 0xdecd0b29, "__stack_chk_fail" },
+	{ 0x9166fada, "strncpy" },
 	{ 0xc310b981, "strnstr" },
 	{ 0xb0e602eb, "memmove" },
 	{ 0xe2d5255a, "strcmp" },
@@ -40,4 +41,4 @@ __used __section(__versions) = {
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "6E85978E88E9A9F7FBE0F7B");
+MODULE_INFO(srcversion, "8BDE611467F079DED3A4FC0");

