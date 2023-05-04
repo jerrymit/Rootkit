@@ -1,0 +1,28 @@
+2023-05-03 23:24:21.593 [info] 
+
+
+
+
+2023-05-03 23:24:21.625 [info] Extension host agent started.
+2023-05-03 23:24:21.736 [info] [127.0.0.1][4751bf67][ExtensionHostConnection] New connection established.
+2023-05-03 23:24:21.736 [info] [127.0.0.1][98e28626][ManagementConnection] New connection established.
+2023-05-03 23:24:21.742 [info] [127.0.0.1][4751bf67][ExtensionHostConnection] <7730> Launched Extension Host Process.
+2023-05-03 23:24:24.954 [error] CodeExpectedError: Could not find pty on pty host
+    at L (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:28:6849)
+    at L.updateIcon (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:28:2680)
+    at Object.call (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:17:5043)
+    at g.s (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:15:5413)
+    at g.q (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:15:4916)
+    at /home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:15:4327
+    at c.invoke (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:11:145)
+    at f.deliver (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:11:2125)
+    at n.fire (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:11:1733)
+    at process.T (/home/cn154/.vscode-server/bin/704ed70d4fd1c6bd6342c436f1ede30d1cff4710/out/vs/platform/terminal/node/ptyHostMain.js:9:21039)
+    at process.emit (node:events:526:28)
+    at emit (node:internal/child_process:938:14)
+    at processTicksAndRejections (node:internal/process/task_queues:84:21)
+2023-05-03 23:29:21.625 [info] New EH opened, aborting shutdown
+2023-05-03 23:59:24.039 [info] [127.0.0.1][98e28626][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-05-03 23:59:24.060 [info] [127.0.0.1][4751bf67][ExtensionHostConnection] <7730> Extension Host Process exited with code: 0, signal: null.
+2023-05-03 23:59:24.061 [info] Last EH closed, waiting before shutting down
+2023-05-04 00:04:24.062 [info] Last EH closed, shutting down
